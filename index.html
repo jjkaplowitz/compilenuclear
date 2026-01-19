@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMPILE NUCLEAR - Nuclear Reactor Testing at the Speed of Hitting Compile</title>
+    <title>Team - COMPILE NUCLEAR</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -16,10 +16,6 @@
             --primary: #00CED1;
             --accent-orange: #FF8C42;
             --accent-yellow: #FFD93D;
-            --black: #000000;
-            --white: #ffffff;
-            --gray: #666666;
-            --light-gray: #cccccc;
         }
 
         body {
@@ -30,12 +26,8 @@
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            scroll-behavior: smooth;
         }
 
-        /* No animated background - clean like FF */
-
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -55,6 +47,7 @@
             font-weight: 800;
             color: #00CED1;
             letter-spacing: 0.05rem;
+            text-decoration: none;
         }
 
         nav ul {
@@ -70,504 +63,127 @@
             font-size: 0.9rem;
             letter-spacing: 0.02rem;
             transition: color 0.2s ease;
-            font-family: 'Inter', sans-serif;
             padding: 0.5rem;
-            -webkit-tap-highlight-color: transparent;
         }
 
         nav a:hover {
             color: var(--primary);
         }
 
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
+        .founders-hero {
+            min-height: 50vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
-            padding: 0 4rem;
-            position: relative;
-            overflow: hidden;
-            background: #000000;
+            align-items: center;
+            padding: 8rem 4rem 4rem;
+            text-align: center;
         }
 
-        .hero-visual {
-            position: absolute;
-            right: 10%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 45%;
-            height: auto;
-            opacity: 1;
-            z-index: 0;
-            max-width: 500px;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-        }
-
-        .hero h1 {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(3rem, 7vw, 5.5rem);
+        .founders-hero h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 800;
             color: #ffffff;
-            margin-bottom: 2rem;
-            line-height: 1.1;
+            margin-bottom: 1.5rem;
             letter-spacing: -0.03em;
         }
 
-        .hero h1 .highlight {
-            color: var(--primary);
-        }
-
-        .hero p {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(1.1rem, 1.5vw, 1.3rem);
-            max-width: 550px;
-            margin-bottom: 3rem;
-            color: #cccccc;
-            line-height: 1.7;
-            font-weight: 400;
-        }
-
-        .cta-button {
-            background: #00CED1;
-            color: #000000;
-            padding: 1.1rem 2.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border: 2px solid #00CED1;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 0.02rem;
-            -webkit-tap-highlight-color: transparent;
-            touch-action: manipulation;
-        }
-
-        .cta-button:hover {
-            background: transparent;
-            color: #00CED1;
-        }
-
-        .cta-button:active {
-            transform: scale(0.98);
-        }
-
-        /* Stats Section */
-        .stats {
-            padding: 8rem 4rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 4rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            background: #000000;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2rem;
-            background: #000000;
-            border: 2px solid #ffffff;
-            transition: all 0.3s ease;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .stat-item:nth-child(1) { border-color: var(--primary); }
-        .stat-item:nth-child(2) { border-color: var(--accent-orange); }
-        .stat-item:nth-child(3) { border-color: var(--accent-yellow); }
-        .stat-item:nth-child(4) { border-color: var(--primary); }
-
-        @media (hover: hover) {
-            .stat-item:hover {
-                transform: translateY(-5px);
-                box-shadow: 8px 8px 0px var(--primary);
-            }
-        }
-
-        .stat-number {
-            font-family: 'Inter', sans-serif;
-            font-size: 4rem;
-            font-weight: 800;
-            color: #ffffff;
-            display: block;
-            margin-bottom: 1rem;
-        }
-
-        .stat-label {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            color: #cccccc;
-            text-transform: uppercase;
-            letter-spacing: 0.1rem;
-            font-weight: 600;
-        }
-
-        /* Story Section */
-        .story-section {
-            padding: 0;
-            max-width: 100%;
-            margin: 0;
-            background: #0a0a0a;
-        }
-
-        .story-section h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            color: #ffffff;
-            margin: 0;
-            padding: 4rem;
-            text-align: center;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .story-intro {
-            text-align: center;
+        .founders-hero p {
             font-size: 1.3rem;
-            margin: 0 auto 6rem;
-            padding: 0 4rem;
+            color: #cccccc;
             max-width: 800px;
-            color: #cccccc;
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-        }
-
-        .story-grid {
-            display: grid;
-            gap: 0;
-        }
-
-        .story-card {
-            position: relative;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            background: #000000;
-            border-top: 2px solid #00CED1;
-            overflow: hidden;
-        }
-
-        .story-card-visual {
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 50%;
-            height: 100%;
-            opacity: 0.8;
-        }
-
-        .story-card-content {
-            position: relative;
-            z-index: 1;
-            padding: 4rem;
-            max-width: 700px;
-        }
-
-        .story-card:nth-child(even) .story-card-visual {
-            right: auto;
-            left: 0;
-        }
-
-        .story-card:nth-child(even) .story-card-content {
-            margin-left: auto;
-        }
-
-        .story-card h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 2.5rem;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .story-card .year {
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            color: var(--primary);
-            display: block;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            letter-spacing: 0.1rem;
-        }
-
-        .story-card:nth-child(2) .year { color: var(--accent-orange); }
-        .story-card:nth-child(3) .year { color: var(--accent-yellow); }
-        .story-card:nth-child(4) .year { color: var(--primary); }
-
-        .story-card p {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #cccccc;
-            font-weight: 400;
-        }
-
-        /* Vision Section */
-        .vision {
-            padding: 8rem 4rem;
-            background: #000000;
-            border-top: 2px solid #00CED1;
-        }
-
-        .vision-content {
-            max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
         }
 
-        .vision h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            color: #ffffff;
-            margin-bottom: 2rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .vision-statement {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.4rem;
-            line-height: 1.8;
-            color: #cccccc;
-            margin-bottom: 4rem;
-            font-weight: 400;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .vision-points {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-
-        .vision-point {
-            background: #000000;
-            padding: 2.5rem;
-            border: 2px solid #ffffff;
-            transition: all 0.3s ease;
-            text-align: left;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .vision-point:nth-child(1) { border-color: var(--primary); }
-        .vision-point:nth-child(2) { border-color: var(--accent-orange); }
-        .vision-point:nth-child(3) { border-color: var(--accent-yellow); }
-
-        @media (hover: hover) {
-            .vision-point:hover {
-                transform: translateY(-5px);
-                box-shadow: 8px 8px 0px var(--primary);
-            }
-        }
-
-        .vision-point h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.3rem;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .vision-point p {
-            font-family: 'Inter', sans-serif;
-            color: #cccccc;
-            line-height: 1.7;
-            font-weight: 400;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 8rem 4rem;
+        .founders-grid {
             max-width: 1400px;
             margin: 0 auto;
-            background: #0a0a0a;
-        }
-
-        .features h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            color: #ffffff;
-            margin-bottom: 4rem;
-            text-align: center;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .feature-grid {
+            padding: 4rem;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-        }
-
-        .feature-card {
-            background: #000000;
-            padding: 3rem;
-            border: 2px solid #00CED1;
-            transition: all 0.3s ease;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        @media (hover: hover) {
-            .feature-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 8px 8px 0px #00CED1;
-            }
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-
-        .feature-card h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.5rem;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .feature-card p {
-            font-family: 'Inter', sans-serif;
-            color: #cccccc;
-            line-height: 1.7;
-            font-weight: 400;
-        }
-
-        /* Comparison Section */
-        .comparison {
-            padding: 8rem 4rem;
-            background: #000000;
-            border-top: 2px solid #00CED1;
-        }
-
-        .comparison-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .comparison h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            color: #ffffff;
-            margin-bottom: 4rem;
-            text-align: center;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-        }
-
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 4rem;
         }
 
-        .comparison-side {
+        .founder-card {
+            background: #000000;
+            border: 2px solid var(--primary);
             padding: 3rem;
-            background: #000000;
-            border: 2px solid #666666;
+            transition: all 0.3s ease;
         }
 
-        .comparison-side.new {
-            border-color: var(--primary);
-            border-width: 3px;
+        .founder-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px var(--primary);
         }
 
-        .comparison-side h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            font-weight: 700;
-        }
-
-        .comparison-side.old h3 {
-            color: #999999;
-        }
-
-        .comparison-side.new h3 {
-            color: #ffffff;
-        }
-
-        .comparison-side ul {
-            list-style: none;
-        }
-
-        .comparison-side li {
-            padding: 1rem 0;
-            font-family: 'Inter', sans-serif;
-            font-size: 1.05rem;
-            border-bottom: 1px solid #333333;
-            color: #999999;
-            font-weight: 400;
-        }
-
-        .comparison-side.new li {
-            color: #ffffff;
-        }
-
-        .comparison-side li:before {
-            content: '→ ';
-            margin-right: 0.5rem;
-            font-weight: 700;
-        }
-
-        .comparison-side.new li:before {
-            color: var(--primary);
-        }
-
-        /* Call to Action */
-        .final-cta {
-            padding: 10rem 4rem;
-            text-align: center;
-            background: #000000;
-        }
-
-        .final-cta h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            color: #ffffff;
-            margin-bottom: 2rem;
+        .founder-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent-orange));
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
             font-weight: 800;
-            letter-spacing: -0.02em;
+            color: #000000;
         }
 
-        .final-cta p {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto 3rem;
+        .founder-card h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .founder-title {
+            font-size: 1.1rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .founder-bio {
             color: #cccccc;
-            font-weight: 400;
-            line-height: 1.7;
+            line-height: 1.8;
+            margin-bottom: 2rem;
         }
 
-        /* Footer */
+        .founder-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .founder-link {
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .founder-link:hover {
+            background: var(--primary);
+            color: #000000;
+        }
+
         footer {
             padding: 4rem;
             background: #000000;
             text-align: center;
+            border-top: 2px solid #00CED1;
         }
 
         footer p {
-            font-family: 'Inter', sans-serif;
             color: #666666;
             font-size: 0.85rem;
-            letter-spacing: 0.05rem;
-            font-weight: 400;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             nav {
                 padding: 1.5rem 2rem;
@@ -581,970 +197,93 @@
                 justify-content: center;
             }
 
-            .logo {
-                font-size: 1.1rem;
+            .founders-hero {
+                padding: 6rem 2rem 3rem;
             }
 
-            .hero {
-                padding: 8rem 2rem 4rem;
-                min-height: 80vh;
-            }
-
-            .hero-visual {
-                width: 80%;
-                right: -10%;
-                opacity: 0.3;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-                margin-bottom: 2rem;
-            }
-
-            .cta-button {
-                padding: 1rem 2rem;
-                font-size: 0.9rem;
-            }
-
-            .stats {
-                padding: 4rem 2rem;
-                gap: 2rem;
-                grid-template-columns: 1fr;
-            }
-
-            .stat-number {
-                font-size: 3rem;
-            }
-
-            .story-section h2,
-            .vision h2,
-            .features h2,
-            .comparison h2,
-            .final-cta h2 {
-                font-size: 2rem;
-                padding: 3rem 2rem;
-            }
-
-            .story-intro {
-                font-size: 1.1rem;
-                padding: 0 2rem;
-                margin-bottom: 3rem;
-            }
-
-            .story-card {
-                min-height: auto;
-                padding: 3rem 0;
-                flex-direction: column;
-            }
-
-            .story-card-visual {
-                position: relative;
-                width: 100%;
-                height: 300px;
-                opacity: 0.4;
-                margin-bottom: 2rem;
-            }
-
-            .story-card-content {
-                padding: 0 2rem 2rem;
-                max-width: 100%;
-            }
-
-            .story-card:nth-child(even) .story-card-visual {
-                left: 0;
-            }
-
-            .story-card:nth-child(even) .story-card-content {
-                margin-left: 0;
-            }
-
-            .story-card h3 {
-                font-size: 1.8rem;
-            }
-
-            .story-card p {
-                font-size: 1rem;
-            }
-
-            .vision,
-            .features,
-            .comparison,
-            .final-cta {
-                padding: 4rem 2rem;
-            }
-
-            .vision-statement {
-                font-size: 1.1rem;
-                margin-bottom: 3rem;
-            }
-
-            .vision-points {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .vision-point {
-                padding: 2rem;
-            }
-
-            .comparison-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .comparison-side {
-                padding: 2rem;
-            }
-
-            .comparison-side h3 {
-                font-size: 1.5rem;
-            }
-
-            .comparison-side li {
-                font-size: 0.95rem;
-            }
-
-            .feature-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .feature-card {
-                padding: 2rem;
-            }
-
-            .feature-card h3 {
-                font-size: 1.3rem;
-            }
-
-            .feature-card p {
-                font-size: 0.95rem;
-            }
-
-            .final-cta {
-                padding: 6rem 2rem;
-            }
-
-            .final-cta h2 {
-                font-size: 2rem;
-            }
-
-            .final-cta p {
-                font-size: 1.1rem;
-            }
-
-            footer {
-                padding: 3rem 2rem;
-            }
-        }
-
-        /* Extra small devices */
-        @media (max-width: 480px) {
-            nav {
-                padding: 1rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-                font-size: 0.8rem;
-            }
-
-            .logo {
-                font-size: 1rem;
-            }
-
-            .hero {
-                padding: 7rem 1.5rem 3rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 0.95rem;
-            }
-
-            .stats {
-                padding: 3rem 1.5rem;
-            }
-
-            .stat-item {
-                padding: 1.5rem;
-            }
-
-            .stat-number {
+            .founders-hero h1 {
                 font-size: 2.5rem;
             }
 
-            .stat-label {
-                font-size: 0.8rem;
+            .founders-grid {
+                padding: 2rem;
+                gap: 3rem;
+                grid-template-columns: 1fr;
             }
 
-            .story-section h2,
-            .vision h2,
-            .features h2,
-            .comparison h2,
-            .final-cta h2 {
-                font-size: 1.75rem;
-                padding: 2rem 1.5rem;
-            }
-
-            .story-card-content,
-            .vision-point,
-            .feature-card,
-            .comparison-side {
-                padding: 1.5rem;
-            }
-
-            .story-card h3 {
-                font-size: 1.5rem;
-            }
-
-            .vision-point h3,
-            .feature-card h3 {
-                font-size: 1.2rem;
-            }
-
-            .comparison-side h3 {
-                font-size: 1.3rem;
+            .founder-card {
+                padding: 2rem;
             }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">COMPILE NUCLEAR</div>
+        <a href="dome-website.html" class="logo">COMPILE NUCLEAR</a>
         <ul>
-            <li><a href="#vision">Vision</a></li>
-            <li><a href="#history">History</a></li>
-            <li><a href="#features">Features</a></li>
+            <li><a href="index.html#vision">Vision</a></li>
+            <li><a href="index.html#history">History</a></li>
+            <li><a href="index.html#features">Features</a></li>
             <li><a href="founders.html">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section class="hero">
-        <svg class="hero-visual" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-            <!-- Optimistic Atomic Age Design - Retro Futuristic Atom -->
-            <defs>
-                <!-- Gradient definitions for colorful atomic age feel -->
-                <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#00CED1;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#20B2AA;stop-opacity:1" />
-                </linearGradient>
-                <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#FF8C42;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:1" />
-                </linearGradient>
-                <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#FFD93D;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
-                </linearGradient>
-                
-                <!-- Animated rotation for orbits -->
-                <animateTransform id="orbit1" attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="20s" repeatCount="indefinite"/>
-                <animateTransform id="orbit2" attributeName="transform" type="rotate" from="0 300 300" to="-360 300 300" dur="15s" repeatCount="indefinite"/>
-                <animateTransform id="orbit3" attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="25s" repeatCount="indefinite"/>
-            </defs>
-            
-            <g transform="translate(300, 300)">
-                <!-- Central nucleus - pulsing -->
-                <circle cx="0" cy="0" r="40" fill="url(#tealGrad)">
-                    <animate attributeName="r" values="40;45;40" dur="3s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="1;0.8;1" dur="3s" repeatCount="indefinite"/>
-                </circle>
-                <circle cx="0" cy="0" r="30" fill="#fff" opacity="0.6">
-                    <animate attributeName="r" values="30;35;30" dur="3s" repeatCount="indefinite"/>
-                </circle>
-                
-                <!-- Orbit rings with animated electrons -->
-                <g>
-                    <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="20s" repeatCount="indefinite"/>
-                    <ellipse cx="0" cy="0" rx="120" ry="40" fill="none" stroke="#00CED1" stroke-width="3" opacity="0.6"/>
-                    <!-- Electrons on orbit 1 -->
-                    <circle cx="120" cy="0" r="10" fill="url(#orangeGrad)"/>
-                    <circle cx="-120" cy="0" r="10" fill="url(#orangeGrad)"/>
-                </g>
-                
-                <g>
-                    <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="15s" repeatCount="indefinite"/>
-                    <ellipse cx="0" cy="0" rx="100" ry="60" fill="none" stroke="#FF8C42" stroke-width="3" opacity="0.6" transform="rotate(60)"/>
-                    <!-- Electrons on orbit 2 -->
-                    <g transform="rotate(60)">
-                        <circle cx="100" cy="0" r="10" fill="url(#yellowGrad)"/>
-                        <circle cx="-100" cy="0" r="10" fill="url(#yellowGrad)"/>
-                    </g>
-                </g>
-                
-                <g>
-                    <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="25s" repeatCount="indefinite"/>
-                    <ellipse cx="0" cy="0" rx="100" ry="60" fill="none" stroke="#FFD93D" stroke-width="3" opacity="0.6" transform="rotate(120)"/>
-                    <!-- Electrons on orbit 3 -->
-                    <g transform="rotate(120)">
-                        <circle cx="100" cy="0" r="10" fill="url(#tealGrad)"/>
-                        <circle cx="-100" cy="0" r="10" fill="url(#tealGrad)"/>
-                    </g>
-                </g>
-                
-                <!-- Outer decorative rings - 1950s style -->
-                <circle cx="0" cy="0" r="160" fill="none" stroke="#00CED1" stroke-width="1" opacity="0.3" stroke-dasharray="5,5">
-                    <animate attributeName="stroke-dashoffset" from="0" to="10" dur="2s" repeatCount="indefinite"/>
-                </circle>
-                <circle cx="0" cy="0" r="180" fill="none" stroke="#FF8C42" stroke-width="1" opacity="0.25" stroke-dasharray="8,8">
-                    <animate attributeName="stroke-dashoffset" from="0" to="16" dur="3s" repeatCount="indefinite"/>
-                </circle>
-                <circle cx="0" cy="0" r="200" fill="none" stroke="#FFD93D" stroke-width="1" opacity="0.2" stroke-dasharray="10,10">
-                    <animate attributeName="stroke-dashoffset" from="0" to="20" dur="4s" repeatCount="indefinite"/>
-                </circle>
-                
-                <!-- Energy bursts - retro starburst pattern -->
-                <g opacity="0.4">
-                    <line x1="0" y1="-220" x2="0" y2="-240" stroke="#00CED1" stroke-width="3">
-                        <animate attributeName="y1" values="-220;-210;-220" dur="2s" repeatCount="indefinite"/>
-                    </line>
-                    <line x1="155" y1="-155" x2="170" y2="-170" stroke="#FF8C42" stroke-width="3">
-                        <animate attributeName="x1" values="155;165;155" dur="2.5s" repeatCount="indefinite"/>
-                        <animate attributeName="y1" values="-155;-165;-155" dur="2.5s" repeatCount="indefinite"/>
-                    </line>
-                    <line x1="220" y1="0" x2="240" y2="0" stroke="#FFD93D" stroke-width="3">
-                        <animate attributeName="x1" values="220;230;220" dur="1.8s" repeatCount="indefinite"/>
-                    </line>
-                    <line x1="155" y1="155" x2="170" y2="170" stroke="#00CED1" stroke-width="3">
-                        <animate attributeName="x1" values="155;165;155" dur="2.2s" repeatCount="indefinite"/>
-                        <animate attributeName="y1" values="155;165;155" dur="2.2s" repeatCount="indefinite"/>
-                    </line>
-                    <line x1="0" y1="220" x2="0" y2="240" stroke="#FF8C42" stroke-width="3">
-                        <animate attributeName="y1" values="220;230;220" dur="2.7s" repeatCount="indefinite"/>
-                    </line>
-                    <line x1="-155" y1="155" x2="-170" y2="170" stroke="#FFD93D" stroke-width="3">
-                        <animate attributeName="x1" values="-155;-165;-155" dur="2.4s" repeatCount="indefinite"/>
-                        <animate attributeName="y1" values="155;165;155" dur="2.4s" repeatCount="indefinite"/>
-                    </line>
-                    <line x1="-220" y1="0" x2="-240" y2="0" stroke="#00CED1" stroke-width="3">
-                        <animate attributeName="x1" values="-220;-230;-220" dur="2.1s" repeatCount="indefinite"/>
-                    </line>
-                    <line x1="-155" y1="-155" x2="-170" y2="-170" stroke="#FF8C42" stroke-width="3">
-                        <animate attributeName="x1" values="-155;-165;-155" dur="2.6s" repeatCount="indefinite"/>
-                        <animate attributeName="y1" values="-155;-165;-155" dur="2.6s" repeatCount="indefinite"/>
-                    </line>
-                </g>
-                
-                <!-- Floating particles for energy effect -->
-                <circle cx="70" cy="-180" r="4" fill="#00CED1" opacity="0.6">
-                    <animate attributeName="cy" values="-180;-200;-180" dur="3s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
-                </circle>
-                <circle cx="-90" cy="170" r="4" fill="#FF8C42" opacity="0.6">
-                    <animate attributeName="cy" values="170;190;170" dur="3.5s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="0.6;1;0.6" dur="3.5s" repeatCount="indefinite"/>
-                </circle>
-                <circle cx="180" cy="80" r="4" fill="#FFD93D" opacity="0.6">
-                    <animate attributeName="cx" values="180;200;180" dur="4s" repeatCount="indefinite"/>
-                    <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
-                </circle>
-            </g>
-        </svg>
-        
-        <div class="hero-content">
-            <h1>Nuclear reactor testing at the speed of <span class="highlight">software development</span></h1>
-            <p>
-                Rent modular, safe reactor test chambers. Build, test, iterate. 
-                Bring back the velocity of the Manhattan Project with modern safety infrastructure.
-            </p>
-            <button class="cta-button">Request Access</button>
-        </div>
-    </section>
-
-    <section class="stats">
-        <div class="stat-item">
-            <span class="stat-number">50+</span>
-            <span class="stat-label">Test DOMEs</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">Deploy</span>
-            <span class="stat-label">Fast regulatory approval</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">∞</span>
-            <span class="stat-label">Iterations</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">1940s</span>
-            <span class="stat-label">Speed</span>
-        </div>
-    </section>
-
-    <section id="history" class="story-section">
-        <h2>The Lost Art of Bold Testing</h2>
-        <p class="story-intro">
-            Nuclear testing has ground to a halt. Reactors were built and rapidly deployed in hours to a few years in the 1940s-1960s. 
-            Today there are 30-40+ nuclear startups but <strong>zero operational test sites in the United States</strong>.
-        </p>
-        
-        <div class="story-grid">
-            <div class="story-card">
-                <svg class="story-card-visual" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Graphite pile representation with atomic age colors -->
-                    <defs>
-                        <linearGradient id="blockGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#e0e0e0;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#b0b0b0;stop-opacity:1" />
-                        </linearGradient>
-                        <linearGradient id="blockGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#c0c0c0;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#909090;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <g>
-                        <!-- Stacked blocks with depth -->
-                        <rect x="50" y="400" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
-                        <rect x="140" y="400" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
-                        <rect x="230" y="400" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
-                        <rect x="320" y="400" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
-                        <rect x="410" y="400" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
-                        
-                        <rect x="50" y="310" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
-                        <rect x="140" y="310" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
-                        <rect x="230" y="310" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
-                        <rect x="320" y="310" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
-                        <rect x="410" y="310" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
-                        
-                        <rect x="50" y="220" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
-                        <rect x="140" y="220" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
-                        <rect x="230" y="220" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
-                        <rect x="320" y="220" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
-                        <rect x="410" y="220" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
-                        
-                        <!-- Animated neutron particles -->
-                        <circle cx="270" cy="250" r="8" fill="#00CED1">
-                            <animate attributeName="cy" values="250;350;250" dur="3s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="300" cy="280" r="8" fill="#FF8C42">
-                            <animate attributeName="cx" values="300;200;300" dur="4s" repeatCount="indefinite"/>
-                            <animate attributeName="cy" values="280;380;280" dur="4s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="1;0.5;1" dur="4s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="240" cy="350" r="8" fill="#FFD93D">
-                            <animate attributeName="cx" values="240;340;240" dur="3.5s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="1;0.5;1" dur="3.5s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="350" cy="380" r="8" fill="#00CED1">
-                            <animate attributeName="cy" values="380;280;380" dur="4.5s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="1;0.5;1" dur="4.5s" repeatCount="indefinite"/>
-                        </circle>
-                        
-                        <!-- Animated radiation waves emanating upward -->
-                        <path d="M 270,100 L 270,180" stroke="#00CED1" stroke-width="4" opacity="0.8">
-                            <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
-                        </path>
-                        <path d="M 290,110 L 320,170" stroke="#FF8C42" stroke-width="4" opacity="0.8">
-                            <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.2s" repeatCount="indefinite"/>
-                        </path>
-                        <path d="M 250,110 L 220,170" stroke="#FFD93D" stroke-width="4" opacity="0.8">
-                            <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.5s" repeatCount="indefinite"/>
-                        </path>
-                        
-                        <!-- Concentric energy rings -->
-                        <circle cx="270" cy="300" r="150" fill="none" stroke="#00CED1" stroke-width="2" opacity="0.4">
-                            <animate attributeName="r" values="150;180;150" dur="3s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="270" cy="300" r="120" fill="none" stroke="#FF8C42" stroke-width="2" opacity="0.4">
-                            <animate attributeName="r" values="120;150;120" dur="3.5s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3.5s" repeatCount="indefinite"/>
-                        </circle>
-                    </g>
-                </svg>
-                <div class="story-card-content">
-                    <span class="year">1942</span>
-                    <h3>Hands-On Criticality</h3>
-                    <p>
-                        Manhattan Project scientists built the world's first reactor under Stagg Field at the University of Chicago. 
-                        Louis Slotin and others would manually position plutonium cores between neutron-reflecting bricks, 
-                        adjusting criticality by hand with nothing more than a screwdriver. This wasn't recklessness—it was 
-                        empirical necessity. They learned through direct experimentation what no computer could simulate.
-                    </p>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <svg class="story-card-visual" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Demon Core sphere with animation -->
-                    <defs>
-                        <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" style="stop-color:#FFD93D;stop-opacity:1" />
-                            <stop offset="50%" style="stop-color:#FF8C42;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:1" />
-                        </radialGradient>
-                    </defs>
-                    <g transform="translate(300, 300)">
-                        <!-- Pulsing danger core -->
-                        <circle cx="0" cy="0" r="80" fill="#FF8C42" opacity="0.3">
-                            <animate attributeName="r" values="80;90;80" dur="2s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="0" cy="0" r="70" fill="#FF8C42" opacity="0.5">
-                            <animate attributeName="r" values="70;75;70" dur="2s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="0" cy="0" r="60" fill="url(#coreGrad)">
-                            <animate attributeName="r" values="60;63;60" dur="2s" repeatCount="indefinite"/>
-                        </circle>
-                        
-                        <!-- Reflector shells -->
-                        <path d="M -100,-50 Q -100,0 -100,50 Q -70,70 0,70 Q 70,70 100,50 Q 100,0 100,-50" 
-                              fill="none" stroke="#666" stroke-width="4"/>
-                        <path d="M -100,-50 Q -100,-100 0,-120 Q 100,-100 100,-50" 
-                              fill="none" stroke="#666" stroke-width="4"/>
-                        
-                        <!-- Animated screwdriver -->
-                        <g>
-                            <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
-                            <rect x="-5" y="-180" width="10" height="100" fill="#999"/>
-                            <polygon points="0,-190 -8,-180 8,-180" fill="#666"/>
-                        </g>
-                        
-                        <!-- Animated warning symbol -->
-                        <g transform="translate(0, 200)">
-                            <polygon points="0,-30 -26,15 26,15" fill="none" stroke="#FF8C42" stroke-width="4">
-                                <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
-                            </polygon>
-                            <text x="0" y="10" font-size="30" fill="#FF8C42" text-anchor="middle" font-weight="bold">
-                                !
-                                <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
-                            </text>
-                        </g>
-                        
-                        <!-- Animated radiation emanating -->
-                        <line x1="0" y1="0" x2="-150" y2="-150" stroke="#00CED1" stroke-width="3" opacity="0.6">
-                            <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
-                        </line>
-                        <line x1="0" y1="0" x2="150" y2="-150" stroke="#FFD93D" stroke-width="3" opacity="0.6">
-                            <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.3s" repeatCount="indefinite"/>
-                        </line>
-                        <line x1="0" y1="0" x2="-150" y2="150" stroke="#FF8C42" stroke-width="3" opacity="0.6">
-                            <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
-                        </line>
-                        <line x1="0" y1="0" x2="150" y2="150" stroke="#00CED1" stroke-width="3" opacity="0.6">
-                            <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.7s" repeatCount="indefinite"/>
-                        </line>
-                        
-                        <!-- Concentric danger rings -->
-                        <circle cx="0" cy="0" r="100" fill="none" stroke="#FF8C42" stroke-width="2" opacity="0.5">
-                            <animate attributeName="r" values="100;130;100" dur="3s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.5;0.1;0.5" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="0" cy="0" r="130" fill="none" stroke="#FFD93D" stroke-width="2" opacity="0.5">
-                            <animate attributeName="r" values="130;160;130" dur="3.5s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.5;0.1;0.5" dur="3.5s" repeatCount="indefinite"/>
-                        </circle>
-                    </g>
-                </svg>
-                <div class="story-card-content">
-                    <span class="year">1946</span>
-                    <h3>The Demon Core</h3>
-                    <p>
-                        The infamous "demon core" killed two scientists in separate criticality accidents. Yet these tragedies 
-                        weren't from lack of care—they emerged from an era where hands-on testing was the only path to understanding. 
-                        Each experiment, successful or failed, taught lessons that shaped nuclear safety forever. The speed of 
-                        learning was extraordinary because testing was constant.
-                    </p>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <svg class="story-card-visual" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                    <!-- BORAX explosion with animation -->
-                    <defs>
-                        <radialGradient id="explosionGrad" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" style="stop-color:#FFD93D;stop-opacity:1" />
-                            <stop offset="50%" style="stop-color:#FF8C42;stop-opacity:0.8" />
-                            <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:0.4" />
-                        </radialGradient>
-                    </defs>
-                    <g transform="translate(300, 400)">
-                        <!-- Reactor vessel -->
-                        <rect x="-60" y="-100" width="120" height="100" fill="#666" stroke="#333" stroke-width="3"/>
-                        
-                        <!-- Animated explosion plume -->
-                        <ellipse cx="0" cy="-120" rx="40" ry="30" fill="url(#explosionGrad)">
-                            <animate attributeName="ry" values="30;35;30" dur="1.5s" repeatCount="indefinite"/>
-                        </ellipse>
-                        <ellipse cx="0" cy="-150" rx="60" ry="40" fill="url(#explosionGrad)">
-                            <animate attributeName="rx" values="60;70;60" dur="1.8s" repeatCount="indefinite"/>
-                            <animate attributeName="ry" values="40;45;40" dur="1.8s" repeatCount="indefinite"/>
-                        </ellipse>
-                        <ellipse cx="0" cy="-190" rx="80" ry="50" fill="#FF8C42" opacity="0.7">
-                            <animate attributeName="rx" values="80;90;80" dur="2s" repeatCount="indefinite"/>
-                            <animate attributeName="ry" values="50;55;50" dur="2s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.7;0.4;0.7" dur="2s" repeatCount="indefinite"/>
-                        </ellipse>
-                        <ellipse cx="0" cy="-240" rx="100" ry="60" fill="#FFD93D" opacity="0.5">
-                            <animate attributeName="rx" values="100;110;100" dur="2.2s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.5;0.2;0.5" dur="2.2s" repeatCount="indefinite"/>
-                        </ellipse>
-                        
-                        <!-- Mushroom cloud top -->
-                        <ellipse cx="0" cy="-280" rx="120" ry="40" fill="#999" opacity="0.6">
-                            <animate attributeName="rx" values="120;130;120" dur="2.5s" repeatCount="indefinite"/>
-                        </ellipse>
-                        
-                        <!-- Animated debris -->
-                        <rect x="-90" y="-80" width="15" height="15" fill="#00CED1" opacity="0.8" transform="rotate(-30)">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; -20,-40; -30,-60" dur="3s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
-                        </rect>
-                        <rect x="75" y="-90" width="12" height="12" fill="#FF8C42" opacity="0.8" transform="rotate(45)">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; 30,-50; 40,-70" dur="3.2s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3.2s" repeatCount="indefinite"/>
-                        </rect>
-                        <circle cx="-70" cy="-130" r="8" fill="#FFD93D" opacity="0.8">
-                            <animate attributeName="cy" values="-130;-170;-200" dur="2.8s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2.8s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="80" cy="-140" r="6" fill="#00CED1" opacity="0.8">
-                            <animate attributeName="cy" values="-140;-180;-210" dur="3s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        
-                        <!-- Expanding shockwave rings -->
-                        <circle cx="0" cy="0" r="180" fill="none" stroke="#FF8C42" stroke-width="3" opacity="0.6">
-                            <animate attributeName="r" values="180;220;180" dur="2s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="0" cy="0" r="220" fill="none" stroke="#FFD93D" stroke-width="2" opacity="0.4">
-                            <animate attributeName="r" values="220;260;220" dur="2.5s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="0.4;0.1;0.4" dur="2.5s" repeatCount="indefinite"/>
-                        </circle>
-                    </g>
-                </svg>
-                <div class="story-card-content">
-                    <span class="year">1950s</span>
-                    <h3>BORAX Experiments</h3>
-                    <p>
-                        The Boiling Water Reactor Experiments deliberately destroyed reactors to understand failure modes. 
-                        Engineers would intentionally cause meltdowns, explosions, and runaway reactions in controlled environments. 
-                        BORAX-I was intentionally destroyed in 1954 to study reactor excursions. This aggressive testing culture 
-                        built the safety knowledge we rely on today.
-                    </p>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <svg class="story-card-visual" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Nuclear rocket engine with animation -->
-                    <defs>
-                        <linearGradient id="rocketGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color:#e0e0e0;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#b0b0b0;stop-opacity:1" />
-                        </linearGradient>
-                        <linearGradient id="exhaustGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color:#FFD93D;stop-opacity:1" />
-                            <stop offset="50%" style="stop-color:#FF8C42;stop-opacity:0.8" />
-                            <stop offset="100%" style="stop-color:#00CED1;stop-opacity:0.3" />
-                        </linearGradient>
-                    </defs>
-                    <g transform="translate(300, 300)">
-                        <!-- Rocket body -->
-                        <rect x="-50" y="-200" width="100" height="180" fill="url(#rocketGrad)" stroke="#333" stroke-width="3"/>
-                        
-                        <!-- Nose cone -->
-                        <polygon points="0,-230 -50,-200 50,-200" fill="#00CED1"/>
-                        
-                        <!-- Pulsing reactor core section -->
-                        <rect x="-50" y="-20" width="100" height="80" fill="#FF8C42" opacity="0.6">
-                            <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2s" repeatCount="indefinite"/>
-                        </rect>
-                        <line x1="-50" y1="-10" x2="50" y2="-10" stroke="#333" stroke-width="2"/>
-                        <line x1="-50" y1="0" x2="50" y2="0" stroke="#333" stroke-width="2"/>
-                        <line x1="-50" y1="10" x2="50" y2="10" stroke="#333" stroke-width="2"/>
-                        <line x1="-50" y1="20" x2="50" y2="20" stroke="#333" stroke-width="2"/>
-                        
-                        <!-- Glowing core indicator -->
-                        <circle cx="0" cy="0" r="15" fill="#FFD93D">
-                            <animate attributeName="r" values="15;18;15" dur="1.5s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="1;0.6;1" dur="1.5s" repeatCount="indefinite"/>
-                        </circle>
-                        
-                        <!-- Nozzle -->
-                        <polygon points="-50,60 -70,100 70,100 50,60" fill="#999" stroke="#333" stroke-width="3"/>
-                        <polygon points="-70,100 -60,140 60,140 70,100" fill="#666"/>
-                        
-                        <!-- Animated exhaust plume -->
-                        <path d="M -60,140 Q -80,200 -100,280" stroke="url(#exhaustGrad)" stroke-width="20" opacity="0.8">
-                            <animate attributeName="opacity" values="0.8;0.5;0.8" dur="1.5s" repeatCount="indefinite"/>
-                            <animate attributeName="stroke-width" values="20;25;20" dur="1.5s" repeatCount="indefinite"/>
-                        </path>
-                        <path d="M 0,140 Q 0,220 0,300" stroke="url(#exhaustGrad)" stroke-width="30" opacity="0.9">
-                            <animate attributeName="opacity" values="0.9;0.6;0.9" dur="1.3s" repeatCount="indefinite"/>
-                            <animate attributeName="stroke-width" values="30;35;30" dur="1.3s" repeatCount="indefinite"/>
-                        </path>
-                        <path d="M 60,140 Q 80,200 100,280" stroke="url(#exhaustGrad)" stroke-width="20" opacity="0.8">
-                            <animate attributeName="opacity" values="0.8;0.5;0.8" dur="1.7s" repeatCount="indefinite"/>
-                            <animate attributeName="stroke-width" values="20;25;20" dur="1.7s" repeatCount="indefinite"/>
-                        </path>
-                        
-                        <!-- Exhaust particles -->
-                        <circle cx="-30" cy="200" r="5" fill="#FFD93D">
-                            <animate attributeName="cy" values="200;280;200" dur="2s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="0" cy="220" r="6" fill="#FF8C42">
-                            <animate attributeName="cy" values="220;300;220" dur="2.2s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="1;0;1" dur="2.2s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="35" cy="210" r="4" fill="#00CED1">
-                            <animate attributeName="cy" values="210;290;210" dur="2.5s" repeatCount="indefinite"/>
-                            <animate attributeName="opacity" values="1;0;1" dur="2.5s" repeatCount="indefinite"/>
-                        </circle>
-                        
-                        <!-- Stars in background - twinkling -->
-                        <circle cx="-150" cy="-100" r="3" fill="#FFD93D">
-                            <animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="170" cy="-150" r="3" fill="#00CED1">
-                            <animate attributeName="opacity" values="1;0.3;1" dur="3.5s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="-180" cy="50" r="2" fill="#FF8C42">
-                            <animate attributeName="opacity" values="1;0.3;1" dur="2.8s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="160" cy="80" r="3" fill="#FFD93D">
-                            <animate attributeName="opacity" values="1;0.3;1" dur="3.2s" repeatCount="indefinite"/>
-                        </circle>
-                        <circle cx="-140" cy="150" r="2" fill="#00CED1">
-                            <animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
-                        </circle>
-                    </g>
-                </svg>
-                <div class="story-card-content">
-                    <span class="year">1960s</span>
-                    <h3>SNAP & NERVA</h3>
-                    <p>
-                        NASA and the AEC tested nuclear rocket engines and space reactors with extraordinary ambition. 
-                        The NERVA program ran nuclear thermal rockets through countless hot-fire tests. Small reactor programs 
-                        like SNAP put nuclear power in space. The pace of iteration was relentless—because the testing 
-                        infrastructure existed.
-                    </p>
-                </div>
-            </div>
-
-            <div class="story-card">
-                <svg class="story-card-visual" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Bureaucracy/red tape with animation -->
-                    <g transform="translate(300, 300)">
-                        <!-- Stack of documents -->
-                        <rect x="-100" y="50" width="200" height="8" fill="#e0e0e0" stroke="#333" stroke-width="1"/>
-                        <rect x="-100" y="60" width="200" height="8" fill="#c0c0c0" stroke="#333" stroke-width="1"/>
-                        <rect x="-100" y="70" width="200" height="8" fill="#e0e0e0" stroke="#333" stroke-width="1"/>
-                        <rect x="-100" y="80" width="200" height="8" fill="#c0c0c0" stroke="#333" stroke-width="1"/>
-                        <rect x="-100" y="90" width="200" height="8" fill="#e0e0e0" stroke="#333" stroke-width="1"/>
-                        <rect x="-100" y="100" width="200" height="8" fill="#c0c0c0" stroke="#333" stroke-width="1"/>
-                        <rect x="-100" y="110" width="200" height="8" fill="#e0e0e0" stroke="#333" stroke-width="1"/>
-                        <rect x="-100" y="120" width="200" height="8" fill="#c0c0c0" stroke="#333" stroke-width="1"/>
-                        
-                        <!-- Pulsing red tape crossed over -->
-                        <rect x="-120" y="-50" width="18" height="220" fill="#FF6B35" opacity="0.8" transform="rotate(-45 -110 60)">
-                            <animate attributeName="opacity" values="0.8;0.5;0.8" dur="2s" repeatCount="indefinite"/>
-                        </rect>
-                        <rect x="90" y="-50" width="18" height="220" fill="#FF6B35" opacity="0.8" transform="rotate(45 100 60)">
-                            <animate attributeName="opacity" values="0.8;0.5;0.8" dur="2s" repeatCount="indefinite"/>
-                        </rect>
-                        
-                        <!-- Clock showing slow time with animated hands -->
-                        <circle cx="0" cy="-80" r="60" fill="#f8f8f8" stroke="#333" stroke-width="4"/>
-                        
-                        <!-- Hour marks -->
-                        <circle cx="0" cy="-135" r="3" fill="#333"/>
-                        <circle cx="52" cy="-80" r="3" fill="#333"/>
-                        <circle cx="0" cy="-25" r="3" fill="#333"/>
-                        <circle cx="-52" cy="-80" r="3" fill="#333"/>
-                        
-                        <!-- Animated clock hands moving very slowly -->
-                        <line x1="0" y1="-80" x2="0" y2="-120" stroke="#FF8C42" stroke-width="4" stroke-linecap="round">
-                            <animateTransform attributeName="transform" type="rotate" from="0 0 -80" to="360 0 -80" dur="60s" repeatCount="indefinite"/>
-                        </line>
-                        <line x1="0" y1="-80" x2="30" y2="-80" stroke="#00CED1" stroke-width="3" stroke-linecap="round">
-                            <animateTransform attributeName="transform" type="rotate" from="0 0 -80" to="360 0 -80" dur="5s" repeatCount="indefinite"/>
-                        </line>
-                        <circle cx="0" cy="-80" r="5" fill="#333"/>
-                        
-                        <!-- Pulsing "DENIED" stamp -->
-                        <g opacity="0.9">
-                            <ellipse cx="0" cy="180" rx="90" ry="35" fill="none" stroke="#FF6B35" stroke-width="6" transform="rotate(-15 0 180)"/>
-                            <text x="0" y="190" font-size="42" fill="#FF6B35" text-anchor="middle" font-weight="bold" font-family="Arial" transform="rotate(-15 0 180)">
-                                DENIED
-                                <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
-                            </text>
-                        </g>
-                        
-                        <!-- Waiting/delay symbols - animated -->
-                        <g transform="translate(-150, -150)">
-                            <circle cx="0" cy="0" r="8" fill="#FFD93D">
-                                <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
-                            </circle>
-                            <circle cx="25" cy="0" r="8" fill="#FFD93D">
-                                <animate attributeName="opacity" values="1;0.3;1" dur="1s" begin="0.3s" repeatCount="indefinite"/>
-                            </circle>
-                            <circle cx="50" cy="0" r="8" fill="#FFD93D">
-                                <animate attributeName="opacity" values="1;0.3;1" dur="1s" begin="0.6s" repeatCount="indefinite"/>
-                            </circle>
-                        </g>
-                        
-                        <!-- Chain links representing being held back -->
-                        <g stroke="#666" stroke-width="4" fill="none">
-                            <ellipse cx="120" cy="-150" rx="15" ry="20"/>
-                            <ellipse cx="140" cy="-150" rx="15" ry="20"/>
-                            <ellipse cx="130" cy="-165" rx="15" ry="20" transform="rotate(90 130 -165)"/>
-                        </g>
-                    </g>
-                </svg>
-                <div class="story-card-content">
-                    <span class="year">TODAY</span>
-                    <h3>The Innovation Desert</h3>
-                    <p>
-                        Modern nuclear startups face a paradox: better simulation tools than ever, but nowhere to test real hardware. 
-                        Building a single test facility costs hundreds of millions and takes over a decade. Regulatory approval is 
-                        Byzantine. The industry that once tested boldly now struggles to test at all. Meanwhile, 30+ nuclear startups 
-                        compete for the handful of existing test reactors.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="vision" class="vision">
-        <div class="vision-content">
-            <h2>Building in Arkansas</h2>
-            <p class="vision-statement">
-                Arkansas offers pro-nuclear government backing, cheap land, and is the anchor of American industry—
-                home to Walmart, Tyson Foods, J.B. Hunt, Dillard's, and more. We're building 50+ modular test DOMEs 
-                to solve the critical bottleneck facing the nuclear industry.
-            </p>
-            
-            <div class="vision-points">
-                <div class="vision-point">
-                    <h3>Government Support</h3>
-                    <p>Pro-nuclear state government backing, favorable regulatory environment, and strategic location for national energy infrastructure development.</p>
-                </div>
-                <div class="vision-point">
-                    <h3>Economic Opportunity</h3>
-                    <p>Cheap land, industrial anchor companies (Walmart, Tyson Foods, J.B. Hunt), and a workforce ready to support advanced nuclear development.</p>
-                </div>
-                <div class="vision-point">
-                    <h3>Critical Infrastructure</h3>
-                    <p>The US needs 100GW added to the grid by 2030 to avoid blackouts. That's 333 new 300MW SMRs—and nowhere to test them. We're solving that.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="features">
-        <h2>50 Modular Test Chambers</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>Self-Contained Test Sites</h3>
-                <p>
-                    Each of our future 50 chambers will be completely isolated with independent cooling, containment, 
-                    and instrumentation. Easy cleanup after aggressive testing. Scale from zero power subcritical 
-                    assemblies to full thermal power tests.
-                </p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>Tiered Rental Pricing</h3>
-                <p>
-                    <strong>Basic ($50K-100K/mo):</strong> Zero power, early R&D<br>
-                    <strong>Standard ($200K-400K/mo):</strong> Low power (kW), design validation<br>
-                    <strong>Advanced ($500K-1M/mo):</strong> Medium power (MW), performance testing<br>
-                    <strong>Premium ($1M-2M+/mo):</strong> Full thermal power, final pre-commercial validation
-                </p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>Rapid Iteration Cycles</h3>
-                <p>
-                    Hit "compile" on your reactor design like hitting build on code. Our streamlined approval process 
-                    and pre-licensed test protocols will let you go from design to experiment in weeks, not years. 
-                    Test, learn, rebuild, repeat.
-                </p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>World-Class Instrumentation</h3>
-                <p>
-                    Every chamber will come equipped with advanced neutronics sensors, thermal imaging, real-time data logging, 
-                    and remote monitoring. Capture every parameter during testing. Build an empirical database of your 
-                    reactor's behavior across all operating conditions.
-                </p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>Designed for Failure</h3>
-                <p>
-                    Each chamber will be built to contain worst-case scenarios. Triple-redundant cooling systems, passive decay 
-                    heat removal, reinforced containment structures. Test to destruction if needed—the chamber will be designed 
-                    to handle it and contain the results for easy decommissioning.
-                </p>
-            </div>
-            
-            <div class="feature-card">
-                <h3>Regulatory Fast-Track</h3>
-                <p>
-                    We will handle the regulatory burden. Pre-approved test protocols, environmental assessments, and safety 
-                    reviews. Your team focuses on innovation while we navigate the NRC. Think of it as regulatory 
-                    infrastructure as a service.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="comparison">
-        <div class="comparison-content">
-            <h2>Why We Win</h2>
-            <div class="comparison-grid">
-                <div class="comparison-side old">
-                    <h3>Traditional Approach</h3>
-                    <ul>
-                        <li>Build facility: 10-15 years</li>
-                        <li>$500M+ to build own facility</li>
-                        <li>Single-purpose infrastructure</li>
-                        <li>Can't afford failures</li>
-                        <li>Each company fights alone</li>
-                        <li>Years between tests</li>
-                    </ul>
-                </div>
-                <div class="comparison-side new">
-                    <h3>COMPILE NUCLEAR</h3>
-                    <ul>
-                        <li>Rent in weeks</li>
-                        <li>Zero upfront (rental model)</li>
-                        <li>Switch chambers between tests</li>
-                        <li>Designed for aggressive testing</li>
-                        <li>Pre-approved, shared burden</li>
-                        <li>Days between iterations</li>
-                    </ul>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 2rem; font-size: 1.1rem; color: var(--gray);">
-                <strong>Our Moat:</strong> First-mover advantage in modular test infrastructure. Once we secure regulatory 
-                approvals and build the first chambers, we have a 5-10 year head start on competitors.
-            </p>
-        </div>
-    </section>
-
-    <section id="contact" class="final-cta">
-        <h2>Build The Future of Energy</h2>
+    <section class="founders-hero">
+        <h1>The Team</h1>
         <p>
-            Nuclear innovation shouldn't take decades. With COMPILE NUCLEAR, you can test reactor designs 
-            at the speed of software development. Safe, modular, and ready when you are.
+            Building the future of nuclear testing infrastructure.
+            Bringing together expertise in nuclear engineering, regulation, and rapid deployment.
         </p>
-        <button class="cta-button">Join The Waitlist</button>
+    </section>
+
+    <section class="founders-grid">
+        <div class="founder-card">
+            <img src="assets/josh.jpg" alt="Joshua Kaplowitz" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 2rem;">
+            <h2>Joshua Kaplowitz</h2>
+            <p class="founder-title">Founder & CEO</p>
+            <p class="founder-bio">
+                Josh Kaplowitz is a U.S. Naval Academy '22 graduate and nuclear-trained Submarine Officer in the U.S. Navy,
+				where he has operated high-consequence nuclear propulsion plants, qualified to drive submarines, supervised
+				reactor operations and teams of up to 70 sailors, and led in demanding shipyard and at-sea environments. <br><br>
+
+                With a dual background in Computer Science and Nuclear Engineering, Josh combines rigorous technical
+				expertise in reactor physics, radiological controls, electrical and mechanical systems with hands-on
+				leadership in mission-critical settings. His Navy experience has involved supervising reactor plants,
+				managing extreme stress under long hours, and driving continuous operational excellence—skills he's now
+				channeling into building the next generation of advanced nuclear energy solutions.
+            </p>
+            <div class="founder-links">
+                <a href="mailto:jjkaplowitz@gmail.com" class="founder-link">Email</a>
+                <a href="https://x.com/jjkaplowitz" class="founder-link">X</a>
+                <a href="https://www.linkedin.com/in/joshua-kaplowitz-22a032170/" class="founder-link">LinkedIn</a>
+            </div>
+        </div>
+
+        <!-- Add more founder cards as needed -->
+        <div class="founder-card">
+            <img src="assets/ryan.jpg" alt="Ryan" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 2rem;">
+            <h2>Ryan Teuschl</h2>
+            <p class="founder-title">Founder and CTO</p>
+            <p class="founder-bio">
+                Ryan T. Teuschl graduated 1st academically out of approximately 1200 students at the United States
+				Naval Academy studying operational research. He excelled in the Navy’s elite nuclear pipeline,
+				earning Highest Honors at Naval Nuclear Power School,
+				topping his class at Prototype, and qualifying as a Nuclear Engineer at Naval Reactors Headquarters in
+				Washington, DC—where he received formal recognition from the Director, Naval Reactors, for outstanding
+				performance in the Prospective Nuclear Engineer Officer (PNEO) program. <br><br>
+
+				As a Nuclear Submarine Officer and Submarine Warfare-qualified leader, Ryan accumulated extensive experience
+				across four fast-attack submarines (three S6G and one S6W reactor plants). He
+				played a key role in the decommissioning and defueling of USS Key West (SSN 722). His proven expertise in nuclear
+				propulsion, reactor engineering, operational safety, and high-reliability leadership directly supports the
+				development of advanced, safe, and scalable nuclear energy solutions.
+            </p>
+            <div class="founder-links">
+                <a href="#" class="founder-link">Email</a>
+                <a href="https://www.linkedin.com/in/ryan-teuschl-a092351bb/" class="founder-link">LinkedIn</a>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -1553,28 +292,5 @@
             Testing nuclear at the speed of hitting compile.
         </p>
     </footer>
-
-    <script>
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // CTA button actions
-        document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', () => {
-                window.location.href = 'mailto:jjkaplowitz@gmail.com?subject=COMPILE NUCLEAR - Waitlist Request&body=Hi, I would like to join the waitlist for COMPILE NUCLEAR.';
-            });
-        });
-    </script>
 </body>
 </html>
