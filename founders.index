@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - COMPILE NUCLEAR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #00CED1;
+            --accent-orange: #FF8C42;
+            --accent-yellow: #FFD93D;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: #000000;
+            border-bottom: 2px solid #00CED1;
+        }
+
+        .logo {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #00CED1;
+            letter-spacing: 0.05rem;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.02rem;
+            transition: color 0.2s ease;
+            padding: 0.5rem;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .founders-hero {
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 8rem 4rem 4rem;
+            text-align: center;
+        }
+
+        .founders-hero h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .founders-hero p {
+            font-size: 1.3rem;
+            color: #cccccc;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .founders-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 4rem;
+        }
+
+        .founder-card {
+            background: #000000;
+            border: 2px solid var(--primary);
+            padding: 3rem;
+            transition: all 0.3s ease;
+        }
+
+        .founder-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px var(--primary);
+        }
+
+        .founder-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent-orange));
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: 800;
+            color: #000000;
+        }
+
+        .founder-card h2 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .founder-title {
+            font-size: 1.1rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .founder-bio {
+            color: #cccccc;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .founder-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .founder-link {
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .founder-link:hover {
+            background: var(--primary);
+            color: #000000;
+        }
+
+        footer {
+            padding: 4rem;
+            background: #000000;
+            text-align: center;
+            border-top: 2px solid #00CED1;
+        }
+
+        footer p {
+            color: #666666;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1.5rem 2rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .founders-hero {
+                padding: 6rem 2rem 3rem;
+            }
+
+            .founders-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .founders-grid {
+                padding: 2rem;
+                gap: 3rem;
+                grid-template-columns: 1fr;
+            }
+
+            .founder-card {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="dome-website.html" class="logo">COMPILE NUCLEAR</a>
+        <ul>
+            <li><a href="dome-website.html#vision">Vision</a></li>
+            <li><a href="dome-website.html#history">History</a></li>
+            <li><a href="dome-website.html#features">Features</a></li>
+            <li><a href="founders.html">Team</a></li>
+            <li><a href="dome-website.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="founders-hero">
+        <h1>The Team</h1>
+        <p>
+            Building the future of nuclear testing infrastructure.
+            Bringing together expertise in nuclear engineering, regulation, and rapid deployment.
+        </p>
+    </section>
+
+    <section class="founders-grid">
+        <div class="founder-card">
+            <img src="assets/josh.jpg" alt="Joshua Kaplowitz" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 2rem;">
+            <h2>Joshua Kaplowitz</h2>
+            <p class="founder-title">Founder & CEO</p>
+            <p class="founder-bio">
+                Josh Kaplowitz is a U.S. Naval Academy '22 graduate and nuclear-trained Submarine Officer in the U.S. Navy,
+				where he has operated high-consequence nuclear propulsion plants, qualified to drive submarines, supervised
+				reactor operations and teams of up to 70 sailors, and led in demanding shipyard and at-sea environments. <br><br>
+
+                With a dual background in Computer Science and Nuclear Engineering, Josh combines rigorous technical
+				expertise in reactor physics, radiological controls, electrical and mechanical systems with hands-on
+				leadership in mission-critical settings. His Navy experience has involved supervising reactor plants,
+				managing extreme stress under long hours, and driving continuous operational excellence—skills he's now
+				channeling into building the next generation of advanced nuclear energy solutions.
+            </p>
+            <div class="founder-links">
+                <a href="mailto:jjkaplowitz@gmail.com" class="founder-link">Email</a>
+                <a href="https://x.com/jjkaplowitz" class="founder-link">X</a>
+                <a href="https://www.linkedin.com/in/joshua-kaplowitz-22a032170/" class="founder-link">LinkedIn</a>
+            </div>
+        </div>
+
+        <!-- Add more founder cards as needed -->
+        <div class="founder-card">
+            <img src="assets/ryan.jpg" alt="Ryan" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 2rem;">
+            <h2>Ryan Teuschl</h2>
+            <p class="founder-title">Founder and CTO</p>
+            <p class="founder-bio">
+                Ryan T. Teuschl graduated 1st academically out of approximately 1200 students at the United States
+				Naval Academy studying operational research. He excelled in the Navy’s elite nuclear pipeline,
+				earning Highest Honors at Naval Nuclear Power School,
+				topping his class at Prototype, and qualifying as a Nuclear Engineer at Naval Reactors Headquarters in
+				Washington, DC—where he received formal recognition from the Director, Naval Reactors, for outstanding
+				performance in the Prospective Nuclear Engineer Officer (PNEO) program. <br><br>
+
+				As a Nuclear Submarine Officer and Submarine Warfare-qualified leader, Ryan accumulated extensive experience
+				across four fast-attack submarines (three S6G and one S6W reactor plants). He
+				played a key role in the decommissioning and defueling of USS Key West (SSN 722). His proven expertise in nuclear
+				propulsion, reactor engineering, operational safety, and high-reliability leadership directly supports the
+				development of advanced, safe, and scalable nuclear energy solutions.
+            </p>
+            <div class="founder-links">
+                <a href="#" class="founder-link">Email</a>
+                <a href="https://www.linkedin.com/in/ryan-teuschl-a092351bb/" class="founder-link">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>COMPILE NUCLEAR — Nuclear Reactor Testing Infrastructure © 2026</p>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">
+            Testing nuclear at the speed of hitting compile.
+        </p>
+    </footer>
+</body>
+</html>
