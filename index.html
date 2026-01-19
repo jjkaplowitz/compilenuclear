@@ -94,14 +94,14 @@
 
         .hero-visual {
             position: absolute;
-            right: -5%;
+            right: 10%;
             top: 50%;
             transform: translateY(-50%);
-            width: 55%;
+            width: 45%;
             height: auto;
             opacity: 1;
             z-index: 0;
-            max-width: 600px;
+            max-width: 500px;
         }
 
         .hero-content {
@@ -845,13 +845,13 @@
                     <stop offset="0%" style="stop-color:#FFD93D;stop-opacity:1" />
                     <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
                 </linearGradient>
-
+                
                 <!-- Animated rotation for orbits -->
                 <animateTransform id="orbit1" attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="20s" repeatCount="indefinite"/>
                 <animateTransform id="orbit2" attributeName="transform" type="rotate" from="0 300 300" to="-360 300 300" dur="15s" repeatCount="indefinite"/>
                 <animateTransform id="orbit3" attributeName="transform" type="rotate" from="0 300 300" to="360 300 300" dur="25s" repeatCount="indefinite"/>
             </defs>
-
+            
             <g transform="translate(300, 300)">
                 <!-- Central nucleus - pulsing -->
                 <circle cx="0" cy="0" r="40" fill="url(#tealGrad)">
@@ -861,7 +861,7 @@
                 <circle cx="0" cy="0" r="30" fill="#fff" opacity="0.6">
                     <animate attributeName="r" values="30;35;30" dur="3s" repeatCount="indefinite"/>
                 </circle>
-
+                
                 <!-- Orbit rings with animated electrons -->
                 <g>
                     <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="20s" repeatCount="indefinite"/>
@@ -870,7 +870,7 @@
                     <circle cx="120" cy="0" r="10" fill="url(#orangeGrad)"/>
                     <circle cx="-120" cy="0" r="10" fill="url(#orangeGrad)"/>
                 </g>
-
+                
                 <g>
                     <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="15s" repeatCount="indefinite"/>
                     <ellipse cx="0" cy="0" rx="100" ry="60" fill="none" stroke="#FF8C42" stroke-width="3" opacity="0.6" transform="rotate(60)"/>
@@ -880,7 +880,7 @@
                         <circle cx="-100" cy="0" r="10" fill="url(#yellowGrad)"/>
                     </g>
                 </g>
-
+                
                 <g>
                     <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="25s" repeatCount="indefinite"/>
                     <ellipse cx="0" cy="0" rx="100" ry="60" fill="none" stroke="#FFD93D" stroke-width="3" opacity="0.6" transform="rotate(120)"/>
@@ -890,7 +890,7 @@
                         <circle cx="-100" cy="0" r="10" fill="url(#tealGrad)"/>
                     </g>
                 </g>
-
+                
                 <!-- Outer decorative rings - 1950s style -->
                 <circle cx="0" cy="0" r="160" fill="none" stroke="#00CED1" stroke-width="1" opacity="0.3" stroke-dasharray="5,5">
                     <animate attributeName="stroke-dashoffset" from="0" to="10" dur="2s" repeatCount="indefinite"/>
@@ -901,7 +901,7 @@
                 <circle cx="0" cy="0" r="200" fill="none" stroke="#FFD93D" stroke-width="1" opacity="0.2" stroke-dasharray="10,10">
                     <animate attributeName="stroke-dashoffset" from="0" to="20" dur="4s" repeatCount="indefinite"/>
                 </circle>
-
+                
                 <!-- Energy bursts - retro starburst pattern -->
                 <g opacity="0.4">
                     <line x1="0" y1="-220" x2="0" y2="-240" stroke="#00CED1" stroke-width="3">
@@ -933,7 +933,7 @@
                         <animate attributeName="y1" values="-155;-165;-155" dur="2.6s" repeatCount="indefinite"/>
                     </line>
                 </g>
-
+                
                 <!-- Floating particles for energy effect -->
                 <circle cx="70" cy="-180" r="4" fill="#00CED1" opacity="0.6">
                     <animate attributeName="cy" values="-180;-200;-180" dur="3s" repeatCount="indefinite"/>
@@ -949,11 +949,11 @@
                 </circle>
             </g>
         </svg>
-
+        
         <div class="hero-content">
             <h1>Nuclear reactor testing at the speed of <span class="highlight">software development</span></h1>
             <p>
-                Rent modular, safe reactor test chambers. Build, test, iterate.
+                Rent modular, safe reactor test chambers. Build, test, iterate. 
                 Bring back the velocity of the Manhattan Project with modern safety infrastructure.
             </p>
             <button class="cta-button">Request Access</button>
@@ -966,8 +966,8 @@
             <span class="stat-label">Test DOMEs</span>
         </div>
         <div class="stat-item">
-            <span class="stat-number">Deploy</span>
-            <span class="stat-label">Quick regulatory approval</span>
+            <span class="stat-number">Tests</span>
+            <span class="stat-label">and regulatory approval</span>
         </div>
         <div class="stat-item">
             <span class="stat-number">∞</span>
@@ -982,10 +982,10 @@
     <section id="history" class="story-section">
         <h2>The Lost Art of Bold Testing</h2>
         <p class="story-intro">
-            Nuclear testing has ground to a halt. Reactors were built and rapidly deployed in hours to a few years in the 1940s-1960s.
+            Nuclear testing has ground to a halt. Reactors were built and rapidly deployed in hours to a few years in the 1940s-1960s. 
             Today there are 30-40+ nuclear startups but <strong>zero operational test sites in the United States</strong>.
         </p>
-
+        
         <div class="story-grid">
             <div class="story-card">
                 <svg class="story-card-visual" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -1007,19 +1007,19 @@
                         <rect x="230" y="400" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
                         <rect x="320" y="400" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
                         <rect x="410" y="400" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
-
+                        
                         <rect x="50" y="310" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
                         <rect x="140" y="310" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
                         <rect x="230" y="310" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
                         <rect x="320" y="310" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
                         <rect x="410" y="310" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
-
+                        
                         <rect x="50" y="220" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
                         <rect x="140" y="220" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
                         <rect x="230" y="220" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
                         <rect x="320" y="220" width="80" height="80" fill="url(#blockGrad2)" stroke="#333" stroke-width="3"/>
                         <rect x="410" y="220" width="80" height="80" fill="url(#blockGrad1)" stroke="#333" stroke-width="3"/>
-
+                        
                         <!-- Animated neutron particles -->
                         <circle cx="270" cy="250" r="8" fill="#00CED1">
                             <animate attributeName="cy" values="250;350;250" dur="3s" repeatCount="indefinite"/>
@@ -1038,7 +1038,7 @@
                             <animate attributeName="cy" values="380;280;380" dur="4.5s" repeatCount="indefinite"/>
                             <animate attributeName="opacity" values="1;0.5;1" dur="4.5s" repeatCount="indefinite"/>
                         </circle>
-
+                        
                         <!-- Animated radiation waves emanating upward -->
                         <path d="M 270,100 L 270,180" stroke="#00CED1" stroke-width="4" opacity="0.8">
                             <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
@@ -1049,7 +1049,7 @@
                         <path d="M 250,110 L 220,170" stroke="#FFD93D" stroke-width="4" opacity="0.8">
                             <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.5s" repeatCount="indefinite"/>
                         </path>
-
+                        
                         <!-- Concentric energy rings -->
                         <circle cx="270" cy="300" r="150" fill="none" stroke="#00CED1" stroke-width="2" opacity="0.4">
                             <animate attributeName="r" values="150;180;150" dur="3s" repeatCount="indefinite"/>
@@ -1065,9 +1065,9 @@
                     <span class="year">1942</span>
                     <h3>Hands-On Criticality</h3>
                     <p>
-                        Manhattan Project scientists built the world's first reactor under Stagg Field at the University of Chicago.
-                        Louis Slotin and others would manually position plutonium cores between neutron-reflecting bricks,
-                        adjusting criticality by hand with nothing more than a screwdriver. This wasn't recklessness—it was
+                        Manhattan Project scientists built the world's first reactor under Stagg Field at the University of Chicago. 
+                        Louis Slotin and others would manually position plutonium cores between neutron-reflecting bricks, 
+                        adjusting criticality by hand with nothing more than a screwdriver. This wasn't recklessness—it was 
                         empirical necessity. They learned through direct experimentation what no computer could simulate.
                     </p>
                 </div>
@@ -1095,20 +1095,20 @@
                         <circle cx="0" cy="0" r="60" fill="url(#coreGrad)">
                             <animate attributeName="r" values="60;63;60" dur="2s" repeatCount="indefinite"/>
                         </circle>
-
+                        
                         <!-- Reflector shells -->
-                        <path d="M -100,-50 Q -100,0 -100,50 Q -70,70 0,70 Q 70,70 100,50 Q 100,0 100,-50"
+                        <path d="M -100,-50 Q -100,0 -100,50 Q -70,70 0,70 Q 70,70 100,50 Q 100,0 100,-50" 
                               fill="none" stroke="#666" stroke-width="4"/>
-                        <path d="M -100,-50 Q -100,-100 0,-120 Q 100,-100 100,-50"
+                        <path d="M -100,-50 Q -100,-100 0,-120 Q 100,-100 100,-50" 
                               fill="none" stroke="#666" stroke-width="4"/>
-
+                        
                         <!-- Animated screwdriver -->
                         <g>
                             <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
                             <rect x="-5" y="-180" width="10" height="100" fill="#999"/>
                             <polygon points="0,-190 -8,-180 8,-180" fill="#666"/>
                         </g>
-
+                        
                         <!-- Animated warning symbol -->
                         <g transform="translate(0, 200)">
                             <polygon points="0,-30 -26,15 26,15" fill="none" stroke="#FF8C42" stroke-width="4">
@@ -1119,7 +1119,7 @@
                                 <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
                             </text>
                         </g>
-
+                        
                         <!-- Animated radiation emanating -->
                         <line x1="0" y1="0" x2="-150" y2="-150" stroke="#00CED1" stroke-width="3" opacity="0.6">
                             <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/>
@@ -1133,7 +1133,7 @@
                         <line x1="0" y1="0" x2="150" y2="150" stroke="#00CED1" stroke-width="3" opacity="0.6">
                             <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.7s" repeatCount="indefinite"/>
                         </line>
-
+                        
                         <!-- Concentric danger rings -->
                         <circle cx="0" cy="0" r="100" fill="none" stroke="#FF8C42" stroke-width="2" opacity="0.5">
                             <animate attributeName="r" values="100;130;100" dur="3s" repeatCount="indefinite"/>
@@ -1149,9 +1149,9 @@
                     <span class="year">1946</span>
                     <h3>The Demon Core</h3>
                     <p>
-                        The infamous "demon core" killed two scientists in separate criticality accidents. Yet these tragedies
-                        weren't from lack of care—they emerged from an era where hands-on testing was the only path to understanding.
-                        Each experiment, successful or failed, taught lessons that shaped nuclear safety forever. The speed of
+                        The infamous "demon core" killed two scientists in separate criticality accidents. Yet these tragedies 
+                        weren't from lack of care—they emerged from an era where hands-on testing was the only path to understanding. 
+                        Each experiment, successful or failed, taught lessons that shaped nuclear safety forever. The speed of 
                         learning was extraordinary because testing was constant.
                     </p>
                 </div>
@@ -1170,7 +1170,7 @@
                     <g transform="translate(300, 400)">
                         <!-- Reactor vessel -->
                         <rect x="-60" y="-100" width="120" height="100" fill="#666" stroke="#333" stroke-width="3"/>
-
+                        
                         <!-- Animated explosion plume -->
                         <ellipse cx="0" cy="-120" rx="40" ry="30" fill="url(#explosionGrad)">
                             <animate attributeName="ry" values="30;35;30" dur="1.5s" repeatCount="indefinite"/>
@@ -1188,12 +1188,12 @@
                             <animate attributeName="rx" values="100;110;100" dur="2.2s" repeatCount="indefinite"/>
                             <animate attributeName="opacity" values="0.5;0.2;0.5" dur="2.2s" repeatCount="indefinite"/>
                         </ellipse>
-
+                        
                         <!-- Mushroom cloud top -->
                         <ellipse cx="0" cy="-280" rx="120" ry="40" fill="#999" opacity="0.6">
                             <animate attributeName="rx" values="120;130;120" dur="2.5s" repeatCount="indefinite"/>
                         </ellipse>
-
+                        
                         <!-- Animated debris -->
                         <rect x="-90" y="-80" width="15" height="15" fill="#00CED1" opacity="0.8" transform="rotate(-30)">
                             <animateTransform attributeName="transform" type="translate" values="0,0; -20,-40; -30,-60" dur="3s" repeatCount="indefinite"/>
@@ -1211,7 +1211,7 @@
                             <animate attributeName="cy" values="-140;-180;-210" dur="3s" repeatCount="indefinite"/>
                             <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
                         </circle>
-
+                        
                         <!-- Expanding shockwave rings -->
                         <circle cx="0" cy="0" r="180" fill="none" stroke="#FF8C42" stroke-width="3" opacity="0.6">
                             <animate attributeName="r" values="180;220;180" dur="2s" repeatCount="indefinite"/>
@@ -1227,9 +1227,9 @@
                     <span class="year">1950s</span>
                     <h3>BORAX Experiments</h3>
                     <p>
-                        The Boiling Water Reactor Experiments deliberately destroyed reactors to understand failure modes.
-                        Engineers would intentionally cause meltdowns, explosions, and runaway reactions in controlled environments.
-                        BORAX-I was intentionally destroyed in 1954 to study reactor excursions. This aggressive testing culture
+                        The Boiling Water Reactor Experiments deliberately destroyed reactors to understand failure modes. 
+                        Engineers would intentionally cause meltdowns, explosions, and runaway reactions in controlled environments. 
+                        BORAX-I was intentionally destroyed in 1954 to study reactor excursions. This aggressive testing culture 
                         built the safety knowledge we rely on today.
                     </p>
                 </div>
@@ -1252,10 +1252,10 @@
                     <g transform="translate(300, 300)">
                         <!-- Rocket body -->
                         <rect x="-50" y="-200" width="100" height="180" fill="url(#rocketGrad)" stroke="#333" stroke-width="3"/>
-
+                        
                         <!-- Nose cone -->
                         <polygon points="0,-230 -50,-200 50,-200" fill="#00CED1"/>
-
+                        
                         <!-- Pulsing reactor core section -->
                         <rect x="-50" y="-20" width="100" height="80" fill="#FF8C42" opacity="0.6">
                             <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2s" repeatCount="indefinite"/>
@@ -1264,17 +1264,17 @@
                         <line x1="-50" y1="0" x2="50" y2="0" stroke="#333" stroke-width="2"/>
                         <line x1="-50" y1="10" x2="50" y2="10" stroke="#333" stroke-width="2"/>
                         <line x1="-50" y1="20" x2="50" y2="20" stroke="#333" stroke-width="2"/>
-
+                        
                         <!-- Glowing core indicator -->
                         <circle cx="0" cy="0" r="15" fill="#FFD93D">
                             <animate attributeName="r" values="15;18;15" dur="1.5s" repeatCount="indefinite"/>
                             <animate attributeName="opacity" values="1;0.6;1" dur="1.5s" repeatCount="indefinite"/>
                         </circle>
-
+                        
                         <!-- Nozzle -->
                         <polygon points="-50,60 -70,100 70,100 50,60" fill="#999" stroke="#333" stroke-width="3"/>
                         <polygon points="-70,100 -60,140 60,140 70,100" fill="#666"/>
-
+                        
                         <!-- Animated exhaust plume -->
                         <path d="M -60,140 Q -80,200 -100,280" stroke="url(#exhaustGrad)" stroke-width="20" opacity="0.8">
                             <animate attributeName="opacity" values="0.8;0.5;0.8" dur="1.5s" repeatCount="indefinite"/>
@@ -1288,7 +1288,7 @@
                             <animate attributeName="opacity" values="0.8;0.5;0.8" dur="1.7s" repeatCount="indefinite"/>
                             <animate attributeName="stroke-width" values="20;25;20" dur="1.7s" repeatCount="indefinite"/>
                         </path>
-
+                        
                         <!-- Exhaust particles -->
                         <circle cx="-30" cy="200" r="5" fill="#FFD93D">
                             <animate attributeName="cy" values="200;280;200" dur="2s" repeatCount="indefinite"/>
@@ -1302,7 +1302,7 @@
                             <animate attributeName="cy" values="210;290;210" dur="2.5s" repeatCount="indefinite"/>
                             <animate attributeName="opacity" values="1;0;1" dur="2.5s" repeatCount="indefinite"/>
                         </circle>
-
+                        
                         <!-- Stars in background - twinkling -->
                         <circle cx="-150" cy="-100" r="3" fill="#FFD93D">
                             <animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
@@ -1325,9 +1325,9 @@
                     <span class="year">1960s</span>
                     <h3>SNAP & NERVA</h3>
                     <p>
-                        NASA and the AEC tested nuclear rocket engines and space reactors with extraordinary ambition.
-                        The NERVA program ran nuclear thermal rockets through countless hot-fire tests. Small reactor programs
-                        like SNAP put nuclear power in space. The pace of iteration was relentless—because the testing
+                        NASA and the AEC tested nuclear rocket engines and space reactors with extraordinary ambition. 
+                        The NERVA program ran nuclear thermal rockets through countless hot-fire tests. Small reactor programs 
+                        like SNAP put nuclear power in space. The pace of iteration was relentless—because the testing 
                         infrastructure existed.
                     </p>
                 </div>
@@ -1346,7 +1346,7 @@
                         <rect x="-100" y="100" width="200" height="8" fill="#c0c0c0" stroke="#333" stroke-width="1"/>
                         <rect x="-100" y="110" width="200" height="8" fill="#e0e0e0" stroke="#333" stroke-width="1"/>
                         <rect x="-100" y="120" width="200" height="8" fill="#c0c0c0" stroke="#333" stroke-width="1"/>
-
+                        
                         <!-- Pulsing red tape crossed over -->
                         <rect x="-120" y="-50" width="18" height="220" fill="#FF6B35" opacity="0.8" transform="rotate(-45 -110 60)">
                             <animate attributeName="opacity" values="0.8;0.5;0.8" dur="2s" repeatCount="indefinite"/>
@@ -1354,16 +1354,16 @@
                         <rect x="90" y="-50" width="18" height="220" fill="#FF6B35" opacity="0.8" transform="rotate(45 100 60)">
                             <animate attributeName="opacity" values="0.8;0.5;0.8" dur="2s" repeatCount="indefinite"/>
                         </rect>
-
+                        
                         <!-- Clock showing slow time with animated hands -->
                         <circle cx="0" cy="-80" r="60" fill="#f8f8f8" stroke="#333" stroke-width="4"/>
-
+                        
                         <!-- Hour marks -->
                         <circle cx="0" cy="-135" r="3" fill="#333"/>
                         <circle cx="52" cy="-80" r="3" fill="#333"/>
                         <circle cx="0" cy="-25" r="3" fill="#333"/>
                         <circle cx="-52" cy="-80" r="3" fill="#333"/>
-
+                        
                         <!-- Animated clock hands moving very slowly -->
                         <line x1="0" y1="-80" x2="0" y2="-120" stroke="#FF8C42" stroke-width="4" stroke-linecap="round">
                             <animateTransform attributeName="transform" type="rotate" from="0 0 -80" to="360 0 -80" dur="60s" repeatCount="indefinite"/>
@@ -1372,7 +1372,7 @@
                             <animateTransform attributeName="transform" type="rotate" from="0 0 -80" to="360 0 -80" dur="5s" repeatCount="indefinite"/>
                         </line>
                         <circle cx="0" cy="-80" r="5" fill="#333"/>
-
+                        
                         <!-- Pulsing "DENIED" stamp -->
                         <g opacity="0.9">
                             <ellipse cx="0" cy="180" rx="90" ry="35" fill="none" stroke="#FF6B35" stroke-width="6" transform="rotate(-15 0 180)"/>
@@ -1381,7 +1381,7 @@
                                 <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
                             </text>
                         </g>
-
+                        
                         <!-- Waiting/delay symbols - animated -->
                         <g transform="translate(-150, -150)">
                             <circle cx="0" cy="0" r="8" fill="#FFD93D">
@@ -1394,7 +1394,7 @@
                                 <animate attributeName="opacity" values="1;0.3;1" dur="1s" begin="0.6s" repeatCount="indefinite"/>
                             </circle>
                         </g>
-
+                        
                         <!-- Chain links representing being held back -->
                         <g stroke="#666" stroke-width="4" fill="none">
                             <ellipse cx="120" cy="-150" rx="15" ry="20"/>
@@ -1407,9 +1407,9 @@
                     <span class="year">TODAY</span>
                     <h3>The Innovation Desert</h3>
                     <p>
-                        Modern nuclear startups face a paradox: better simulation tools than ever, but nowhere to test real hardware.
-                        Building a single test facility costs hundreds of millions and takes over a decade. Regulatory approval is
-                        Byzantine. The industry that once tested boldly now struggles to test at all. Meanwhile, 30+ nuclear startups
+                        Modern nuclear startups face a paradox: better simulation tools than ever, but nowhere to test real hardware. 
+                        Building a single test facility costs hundreds of millions and takes over a decade. Regulatory approval is 
+                        Byzantine. The industry that once tested boldly now struggles to test at all. Meanwhile, 30+ nuclear startups 
                         compete for the handful of existing test reactors.
                     </p>
                 </div>
@@ -1419,13 +1419,13 @@
 
     <section id="vision" class="vision">
         <div class="vision-content">
-            <h2>We're Building in Arkansas</h2>
+            <h2>Building in Arkansas</h2>
             <p class="vision-statement">
                 Arkansas offers pro-nuclear government backing, cheap land, and is the anchor of American industry—
-                home to Walmart, Tyson Foods, J.B. Hunt, Dillard's, and more. We're building 50+ modular test DOMEs
+                home to Walmart, Tyson Foods, J.B. Hunt, Dillard's, and more. We're building 50+ modular test DOMEs 
                 to solve the critical bottleneck facing the nuclear industry.
             </p>
-
+            
             <div class="vision-points">
                 <div class="vision-point">
                     <h3>Government Support</h3>
@@ -1449,12 +1449,12 @@
             <div class="feature-card">
                 <h3>Self-Contained Test Sites</h3>
                 <p>
-                    Each of our future 50 chambers will be completely isolated with independent cooling, containment,
-                    and instrumentation. Easy cleanup after aggressive testing. Scale from zero power subcritical
+                    Each of our future 50 chambers will be completely isolated with independent cooling, containment, 
+                    and instrumentation. Easy cleanup after aggressive testing. Scale from zero power subcritical 
                     assemblies to full thermal power tests.
                 </p>
             </div>
-
+            
             <div class="feature-card">
                 <h3>Tiered Rental Pricing</h3>
                 <p>
@@ -1464,39 +1464,39 @@
                     <strong>Premium ($1M-2M+/mo):</strong> Full thermal power, final pre-commercial validation
                 </p>
             </div>
-
+            
             <div class="feature-card">
                 <h3>Rapid Iteration Cycles</h3>
                 <p>
-                    Hit "compile" on your reactor design like hitting build on code. Our streamlined approval process
-                    and pre-licensed test protocols let you go from design to experiment in weeks, not years.
+                    Hit "compile" on your reactor design like hitting build on code. Our streamlined approval process 
+                    and pre-licensed test protocols will let you go from design to experiment in weeks, not years. 
                     Test, learn, rebuild, repeat.
                 </p>
             </div>
-
+            
             <div class="feature-card">
                 <h3>World-Class Instrumentation</h3>
                 <p>
-                    Every chamber comes equipped with advanced neutronics sensors, thermal imaging, real-time data logging,
-                    and remote monitoring. Capture every parameter during testing. Build an empirical database of your
+                    Every chamber will come equipped with advanced neutronics sensors, thermal imaging, real-time data logging, 
+                    and remote monitoring. Capture every parameter during testing. Build an empirical database of your 
                     reactor's behavior across all operating conditions.
                 </p>
             </div>
-
+            
             <div class="feature-card">
                 <h3>Designed for Failure</h3>
                 <p>
-                    Each chamber is built to contain worst-case scenarios. Triple-redundant cooling systems, passive decay
-                    heat removal, reinforced containment structures. Test to destruction if needed—the chamber is designed
+                    Each chamber will be built to contain worst-case scenarios. Triple-redundant cooling systems, passive decay 
+                    heat removal, reinforced containment structures. Test to destruction if needed—the chamber will be designed 
                     to handle it and contain the results for easy decommissioning.
                 </p>
             </div>
-
+            
             <div class="feature-card">
                 <h3>Regulatory Fast-Track</h3>
                 <p>
-                    We handle the regulatory burden. Pre-approved test protocols, environmental assessments, and safety
-                    reviews. Your team focuses on innovation while we navigate the NRC. Think of it as regulatory
+                    We will handle the regulatory burden. Pre-approved test protocols, environmental assessments, and safety 
+                    reviews. Your team focuses on innovation while we navigate the NRC. Think of it as regulatory 
                     infrastructure as a service.
                 </p>
             </div>
@@ -1531,7 +1531,7 @@
                 </div>
             </div>
             <p style="text-align: center; margin-top: 2rem; font-size: 1.1rem; color: var(--gray);">
-                <strong>Our Moat:</strong> First-mover advantage in modular test infrastructure. Once we secure regulatory
+                <strong>Our Moat:</strong> First-mover advantage in modular test infrastructure. Once we secure regulatory 
                 approvals and build the first chambers, we have a 5-10 year head start on competitors.
             </p>
         </div>
@@ -1540,7 +1540,7 @@
     <section id="contact" class="final-cta">
         <h2>Build The Future of Energy</h2>
         <p>
-            Nuclear innovation shouldn't take decades. With COMPILE NUCLEAR, you can test reactor designs
+            Nuclear innovation shouldn't take decades. With COMPILE NUCLEAR, you can test reactor designs 
             at the speed of software development. Safe, modular, and ready when you are.
         </p>
         <button class="cta-button">Join The Waitlist</button>
